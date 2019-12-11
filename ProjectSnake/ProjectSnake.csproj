@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsCoordinates.cs" />
+    <Compile Include="ClsData.cs" />
     <Compile Include="ClsEventKey.cs" />
     <Compile Include="ClsFood.cs" />
     <Compile Include="ClsInput.cs" />
@@ -82,6 +83,14 @@
     <Compile Include="FrmOption.Designer.cs">
       <DependentUpon>FrmOption.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmScoreUser.cs" />
+    <Compile Include="FrmScoreUser.Designer.cs">
+      <DependentUpon>FrmScoreUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTopScore.cs" />
+    <Compile Include="FrmTopScore.Designer.cs">
+      <DependentUpon>FrmTopScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="IrfDirection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOption.resx">
       <DependentUpon>FrmOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScoreUser.resx">
+      <DependentUpon>FrmScoreUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTopScore.resx">
+      <DependentUpon>FrmTopScore.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

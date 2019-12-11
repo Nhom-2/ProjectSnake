@@ -13,18 +13,18 @@ namespace ProjectSnake
 	public partial class FrmMain : Form
 	{
 		private FrmOption frmOption;
-//		private FrmTopScore frmHighScore;
+		private FrmTopScore frmHighScore;
 		private FrmMode1 frmMode1;
 		private FrmMode2 frmMode2;
-//		private ClsData database;
+		private ClsData database;
 		public FrmMain()
 		{
 			InitializeComponent();
 			this.BackgroundImage = new Bitmap(Application.StartupPath + ClsParameter.LinkBackground + ClsParameter.Extension);
 			this.BackgroundImageLayout = ImageLayout.Stretch;
 			this.frmOption = new FrmOption();
-//			this.frmHighScore = new FrmTopScore();
-//			database = new ClsData();
+			this.frmHighScore = new FrmTopScore();
+			database = new ClsData();
 		}
 		void BtStartClick(object sender, EventArgs e)
 		{
@@ -41,8 +41,8 @@ namespace ProjectSnake
 				                        frmOption.isSpeedup, 
 				                        frmOption.playerKey1);
 				frmMode1.ShowDialog();
-//				database.InsertdataUser(frmMode1.playerName);
-//				database.InsertdataCore(frmMode1.playerName,frmMode1.score,(frmOption.hasBorder) ? 1 : 2);
+				database.insertDataUser(frmMode1.playerName);
+				database.insertDataCore(frmMode1.playerName,frmMode1.score,(frmOption.hasBorder) ? 1 : 2);
 			}
 			else
 			{
@@ -58,10 +58,10 @@ namespace ProjectSnake
 				                        frmOption.playerKey1, 
 				                        frmOption.playerKey2);
 				frmMode2.ShowDialog();
-//				database.InsertdataUser(frmMode2.playerName1);
-//				database.InsertdataCore(frmMode2.playerName1,frmMode2.score1,(frmOption.hasBorder) ? 1 : 2);
-//				database.InsertdataUser(frmMode2.playerName2);
-//				database.InsertdataCore(frmMode2.playerName2,frmMode2.score2,(frmOption.hasBorder) ? 1 : 2);
+				database.insertDataUser(frmMode2.playerName1);
+				database.insertDataCore(frmMode2.playerName1,frmMode2.score1,(frmOption.hasBorder) ? 1 : 2);
+				database.insertDataUser(frmMode2.playerName2);
+				database.insertDataCore(frmMode2.playerName2,frmMode2.score2,(frmOption.hasBorder) ? 1 : 2);
 			}
 			this.Show();
 		}
@@ -71,7 +71,7 @@ namespace ProjectSnake
 		}
 		void BtTopScoreClick(object sender, EventArgs e)
 		{
-//			this.frmHighScore.ShowDialog();
+			this.frmHighScore.ShowDialog();
 		}
 		void BtExitClick(object sender, EventArgs e)
 		{
