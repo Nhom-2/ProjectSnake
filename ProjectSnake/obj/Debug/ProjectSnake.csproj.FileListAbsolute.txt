@@ -7,3 +7,15 @@ T:\ProjectSnake\obj\Debug\ProjectSnake.FrmMode1.resources
 T:\ProjectSnake\obj\Debug\ProjectSnake.csproj.GenerateResource.Cache
 T:\ProjectSnake\obj\Debug\ProjectSnake.exe
 T:\ProjectSnake\obj\Debug\ProjectSnake.pdb
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.csprojResolveAssemblyReference.cache
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.FrmEndGame1.resources
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.FrmMain.resources
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.FrmMode1.resources
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.FrmMode2.resources
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.FrmOption.resources
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.csproj.GenerateResource.Cache
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.exe
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.pdb
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\bin\Debug\ProjectSnake.exe.config
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\bin\Debug\ProjectSnake.exe
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\bin\Debug\ProjectSnake.pdb

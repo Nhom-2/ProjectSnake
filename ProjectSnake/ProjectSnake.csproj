@@ -74,6 +74,10 @@
     <Compile Include="FrmMode1.Designer.cs">
       <DependentUpon>FrmMode1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMode2.cs" />
+    <Compile Include="FrmMode2.Designer.cs">
+      <DependentUpon>FrmMode2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmOption.cs" />
     <Compile Include="FrmOption.Designer.cs">
       <DependentUpon>FrmOption.cs</DependentUpon>
@@ -94,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMode1.resx">
       <DependentUpon>FrmMode1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMode2.resx">
+      <DependentUpon>FrmMode2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOption.resx">
       <DependentUpon>FrmOption.cs</DependentUpon>

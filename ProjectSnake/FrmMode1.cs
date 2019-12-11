@@ -43,7 +43,13 @@ namespace ProjectSnake
 			this.MapSizeWidth = winsize.Width;
 			this.MapSizeHeight = winsize.Height;
 			this.hasBorder = hasborder;
-
+			
+			this.BackgroundImage = new Bitmap(Application.StartupPath + ClsParameter.LinkBackground + ClsParameter.Extension);
+			this.BackgroundImageLayout = ImageLayout.Stretch;
+			this.ptbGame.BackgroundImage = new Bitmap(Application.StartupPath + ClsParameter.LinkBGGame + color + ClsParameter.Extension);
+			this.ptbGame.BackgroundImageLayout = ImageLayout.Stretch;
+			this.ptbBorder.BackgroundImage = new Bitmap(Application.StartupPath + ClsParameter.LinkBDGame + ClsParameter.Extension);
+			this.ptbBorder.BackgroundImageLayout = ImageLayout.Stretch;
 			this.ptbBorder.Visible = (this.hasBorder);
 			
 			this.snake = new ClsSnake(lengh, snakesize, snakecolor, 2, this.MapSizeWidth, this.MapSizeHeight);
@@ -88,27 +94,46 @@ namespace ProjectSnake
 		}
 		void TimerDelayTick(object sender, EventArgs e)
 		{	
-
+			this.press.processEventKey(this.snake, this.key);
+			if (hasBorder)
+				this.process.logicBorderEnable(snake, ref this.increaceFree, food, this.MapSizeWidth, this.MapSizeHeight, this.isSpeedup, this.timerDelay);
+			else
+				this.process.logicBorderDisable(snake, ref this.increaceFree, food, this.MapSizeWidth, this.MapSizeHeight, this.isSpeedup, this.timerDelay);
+			this.ptbGame.Invalidate();
 		}
 		void TimerCheckAliveTick(object sender, EventArgs e)
 		{
-
+			if (!this.snake.Status)
+				this.Close();
 		}
 		void PtbGamePaint(object sender, PaintEventArgs e)
 		{
-
+			this.lbScore.Text = string.Concat("Score ", ((this.snake.lengh - ClsParameter.SnakeLenghDefault) * 15).ToString());
+			this.food.drawFood(e, this.snake.Size);
+			this.snake.drawSnake(e);
 		}
 		private void resumeGame()
 		{
-
+			this.lbPause.Visible = false;
+			this.timerDelay.Start();
+			this.timerCheckAlive.Start();
 		}
 		private void pauseGame()
 		{
-
+			this.lbPause.Visible = true;
+			this.lbPause.Text = "Press any key";
+			this.timerDelay.Stop();
+			this.timerCheckAlive.Stop();
 		}
 		void FrmRunGameKeyDown(object sender, KeyEventArgs e)
 		{
-
+			if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.Space)
+			{
+				this.pauseGame();
+				return;
+			}
+			if (!timerDelay.Enabled)
+				this.resumeGame();
 			ClsInput.ChangeState(e.KeyCode, true);
 		}
 		void FrmMode1KeyUp(object sender, KeyEventArgs e)
@@ -117,7 +142,12 @@ namespace ProjectSnake
 		}
 		void FrmMode1FormClosing(object sender, FormClosingEventArgs e)
 		{
-
+			this.timerDelay.Stop();
+			this.timerCheckAlive.Stop();
+			this.score = (this.snake.lengh - ClsParameter.SnakeLenghDefault) * 15;
+			FrmEndGame1 frmEndGame1 = new FrmEndGame1(this.score);
+			frmEndGame1.ShowDialog();
+			this.playerName = frmEndGame1.name;
 		}
 	}
 }
