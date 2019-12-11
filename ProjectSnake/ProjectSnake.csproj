@@ -58,6 +58,14 @@
     <Compile Include="ClsProcessActive.cs" />
     <Compile Include="ClsProcessLogic.cs" />
     <Compile Include="ClsSnake.cs" />
+    <Compile Include="FrmEndGame1.cs" />
+    <Compile Include="FrmEndGame1.Designer.cs">
+      <DependentUpon>FrmEndGame1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEndGame2.cs" />
+    <Compile Include="FrmEndGame2.Designer.cs">
+      <DependentUpon>FrmEndGame2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs" />
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -74,6 +82,9 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmEndGame1.resx">
+      <DependentUpon>FrmEndGame1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>

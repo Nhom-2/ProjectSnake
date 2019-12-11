@@ -12,6 +12,6 @@ namespace ProjectSnake
 	}
 	public enum Direction
 	{
-		NONE
+		PAUSE, RESUME, UP, DOWN, LEFT, RIGHT, NONE
 	}
 }
