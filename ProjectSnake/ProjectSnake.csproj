@@ -74,6 +74,10 @@
     <Compile Include="FrmMode1.Designer.cs">
       <DependentUpon>FrmMode1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmOption.cs" />
+    <Compile Include="FrmOption.Designer.cs">
+      <DependentUpon>FrmOption.cs</DependentUpon>
+    </Compile>
     <Compile Include="IrfDirection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMode1.resx">
       <DependentUpon>FrmMode1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOption.resx">
+      <DependentUpon>FrmOption.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
