@@ -1,0 +1,9 @@
+T:\ProjectSnake\bin\Debug\ProjectSnake.exe.config
+T:\ProjectSnake\bin\Debug\ProjectSnake.exe
+T:\ProjectSnake\bin\Debug\ProjectSnake.pdb
+T:\ProjectSnake\obj\Debug\ProjectSnake.csprojResolveAssemblyReference.cache
+T:\ProjectSnake\obj\Debug\ProjectSnake.FrmMain.resources
+T:\ProjectSnake\obj\Debug\ProjectSnake.FrmMode1.resources
+T:\ProjectSnake\obj\Debug\ProjectSnake.csproj.GenerateResource.Cache
+T:\ProjectSnake\obj\Debug\ProjectSnake.exe
+T:\ProjectSnake\obj\Debug\ProjectSnake.pdb
