@@ -9,7 +9,11 @@ namespace ProjectSnake
 	/// Description of ClsSnake.
 	/// doi tuong snake
 	/// </summary>
-	public class ClsSnake : IrfDirection
+	public enum Direction
+	{
+		PAUSE, RESUME, UP, DOWN, LEFT, RIGHT, NONE
+	}
+	public class ClsSnake
 	{
 		private readonly int MapSizeWidth;
 		private readonly int MapSizeHeight;

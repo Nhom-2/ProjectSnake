@@ -7,7 +7,7 @@ namespace ProjectSnake
 	/// <summary>
 	/// Description of ClsEventKey.
 	/// </summary>
-	public class ClsEventKey : IrfDirection
+	public class ClsEventKey
 	{
 		private Direction getKeyCode(ClsSnake snake, ClsKeyCode key)
 		{

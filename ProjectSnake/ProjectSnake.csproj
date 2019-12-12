@@ -91,7 +91,6 @@
     <Compile Include="FrmTopScore.Designer.cs">
       <DependentUpon>FrmTopScore.cs</DependentUpon>
     </Compile>
-    <Compile Include="IrfDirection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

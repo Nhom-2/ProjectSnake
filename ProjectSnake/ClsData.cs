@@ -144,7 +144,7 @@ namespace ProjectSnake
 							
 			closeDataBase();
 		}
-		public bool isExist(string Name)
+		private bool isExist(string Name)
 		{
 			connetDataBase();
 			string DataName = null;

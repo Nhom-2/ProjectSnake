@@ -7,7 +7,7 @@ namespace ProjectSnake
 	/// <summary>
 	/// Description of ClsProcessEvent.
 	/// </summary>
-	public class ClsProcessActive : IrfDirection
+	public class ClsProcessActive// : IrfDirection
 	{
 		private void changeSpeed(Timer time)
 		{
