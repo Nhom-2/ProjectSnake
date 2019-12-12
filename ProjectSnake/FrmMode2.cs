@@ -119,6 +119,7 @@ namespace ProjectSnake
 					this.timerDelay2.Stop();		// tranh tinh trang chet cung luc load form chong len nhau
 					this.Close();
 				}
+				return;
 			}	
 			this.press.processEventKey(this.snake1, this.key1);
 			if (hasBorder)
@@ -137,6 +138,7 @@ namespace ProjectSnake
 					this.timerDelay1.Stop();		// tranh tinh trang chet cung luc load form chong len nhau
 					this.Close();
 				}
+				return;
 			}	
 			this.press.processEventKey(this.snake2, this.key2);
 			if (hasBorder)
