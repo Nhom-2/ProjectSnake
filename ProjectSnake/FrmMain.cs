@@ -57,7 +57,7 @@ namespace ProjectSnake
 				                        frmOption.playerKey1, 
 				                        frmOption.playerKey2);
 				frmMode2.ShowDialog();
-				database.saveScore(frmMode2.playerName1, frmMode2.playerName2, frmMode1.score, frmMode2.score2, (frmOption.hasBorder) ? 1 : 2);
+				database.saveScore(frmMode2.playerName1, frmMode2.playerName2, frmMode2.score1, frmMode2.score2, (frmOption.hasBorder) ? 1 : 2);
 			}
 			this.Show();
 		}

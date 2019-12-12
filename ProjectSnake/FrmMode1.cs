@@ -69,7 +69,6 @@ namespace ProjectSnake
 			
 			this.timerDelay.Interval = ClsParameter.DelayDefault;
 			this.timerDelay.Start();
-			this.timerCheckAlive.Start();
 			
 			this.food.generateFood(snake, MapSizeWidth, MapSizeHeight);
 		}
@@ -94,17 +93,14 @@ namespace ProjectSnake
 		}
 		void TimerDelayTick(object sender, EventArgs e)
 		{	
+			if (!this.snake.Status)
+				this.Close();
 			this.press.processEventKey(this.snake, this.key);
 			if (hasBorder)
 				this.process.logicBorderEnable(snake, ref this.increaceFree, food, this.MapSizeWidth, this.MapSizeHeight, this.isSpeedup, this.timerDelay);
 			else
 				this.process.logicBorderDisable(snake, ref this.increaceFree, food, this.MapSizeWidth, this.MapSizeHeight, this.isSpeedup, this.timerDelay);
 			this.ptbGame.Invalidate();
-		}
-		void TimerCheckAliveTick(object sender, EventArgs e)
-		{
-			if (!this.snake.Status)
-				this.Close();
 		}
 		void PtbGamePaint(object sender, PaintEventArgs e)
 		{
@@ -116,14 +112,12 @@ namespace ProjectSnake
 		{
 			this.lbPause.Visible = false;
 			this.timerDelay.Start();
-			this.timerCheckAlive.Start();
 		}
 		private void pauseGame()
 		{
 			this.lbPause.Visible = true;
 			this.lbPause.Text = "Press any key";
 			this.timerDelay.Stop();
-			this.timerCheckAlive.Stop();
 		}
 		void FrmRunGameKeyDown(object sender, KeyEventArgs e)
 		{
@@ -143,7 +137,6 @@ namespace ProjectSnake
 		void FrmMode1FormClosing(object sender, FormClosingEventArgs e)
 		{
 			this.timerDelay.Stop();
-			this.timerCheckAlive.Stop();
 			this.score = (this.snake.lengh - ClsParameter.SnakeLenghDefault) * 15;
 			FrmEndGame1 frmEndGame1 = new FrmEndGame1(this.score);
 			frmEndGame1.ShowDialog();

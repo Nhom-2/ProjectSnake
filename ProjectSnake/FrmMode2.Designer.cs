@@ -14,7 +14,6 @@ namespace ProjectSnake
 		private System.Windows.Forms.Label lbPause;
 		private System.Windows.Forms.Timer timerDelay2;
 		private System.Windows.Forms.Label lbScore2;
-		private System.Windows.Forms.Timer timerCheckAlive;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -45,7 +44,6 @@ namespace ProjectSnake
 			this.lbPause = new System.Windows.Forms.Label();
 			this.timerDelay2 = new System.Windows.Forms.Timer(this.components);
 			this.lbScore2 = new System.Windows.Forms.Label();
-			this.timerCheckAlive = new System.Windows.Forms.Timer(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.ptbGame)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ptbBorder)).BeginInit();
 			this.SuspendLayout();
@@ -118,11 +116,6 @@ namespace ProjectSnake
 			this.lbScore2.TabIndex = 0;
 			this.lbScore2.Text = "Snake 2: 0";
 			this.lbScore2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// timerCheckAlive
-			// 
-			this.timerCheckAlive.Interval = 1000;
-			this.timerCheckAlive.Tick += new System.EventHandler(this.TimerCheckAliveTick);
 			// 
 			// FrmMode2
 			// 
