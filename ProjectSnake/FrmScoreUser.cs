@@ -14,8 +14,7 @@ namespace ProjectSnake
 		private ClsData Data_Object = new ClsData();
 		public FormScoreUser()
 		{
-			InitializeComponent();
-			
+			InitializeComponent();	
 		}
 		private void loadCoreUser()
 		{

@@ -11,6 +11,11 @@ namespace ProjectSnake
 	/// </summary>
 	public static class ClsParameter
 	{
+		public const string databaseServerName = ".\\Elessa";
+		public const string databaseUserName = "sa";
+		public const string databasePassword = "123";
+		public const string databaseName = "snake";
+		
 		public const int MarginTop = 80; 				// pixels
 		public const int MarginLeft = 40; 				// pixels
 		public const int BorderSize = 20; 				// pixels

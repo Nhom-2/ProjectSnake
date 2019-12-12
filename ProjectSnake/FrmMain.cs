@@ -41,8 +41,7 @@ namespace ProjectSnake
 				                        frmOption.isSpeedup, 
 				                        frmOption.playerKey1);
 				frmMode1.ShowDialog();
-				database.insertDataUser(frmMode1.playerName);
-				database.insertDataCore(frmMode1.playerName,frmMode1.score,(frmOption.hasBorder) ? 1 : 2);
+				database.saveScore(frmMode1.playerName, frmMode1.score, (frmOption.hasBorder) ? 1 : 2);
 			}
 			else
 			{
@@ -58,10 +57,7 @@ namespace ProjectSnake
 				                        frmOption.playerKey1, 
 				                        frmOption.playerKey2);
 				frmMode2.ShowDialog();
-				database.insertDataUser(frmMode2.playerName1);
-				database.insertDataCore(frmMode2.playerName1,frmMode2.score1,(frmOption.hasBorder) ? 1 : 2);
-				database.insertDataUser(frmMode2.playerName2);
-				database.insertDataCore(frmMode2.playerName2,frmMode2.score2,(frmOption.hasBorder) ? 1 : 2);
+				database.saveScore(frmMode2.playerName1, frmMode2.playerName2, frmMode1.score, frmMode2.score2, (frmOption.hasBorder) ? 1 : 2);
 			}
 			this.Show();
 		}

@@ -19,8 +19,7 @@ namespace ProjectSnake
 		private ClsData Data_Object = new ClsData();
 		public FrmTopScore()
 		{
-			InitializeComponent();
-			
+			InitializeComponent();	
 		}
 		void FormTopCoreLoad(object sender, EventArgs e)
 		{

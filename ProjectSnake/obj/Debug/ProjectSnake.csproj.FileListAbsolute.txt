@@ -33,3 +33,5 @@ D:\GameSnake\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.exe
 D:\GameSnake\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.pdb
 D:\GameSnake\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.FormScoreUser.resources
 D:\GameSnake\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.FrmTopScore.resources
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.FormScoreUser.resources
+T:\SERCULES\Code C#\ProjectSnake\ProjectSnake\obj\Debug\ProjectSnake.FrmTopScore.resources

@@ -23,7 +23,7 @@ namespace ProjectSnake
 			try
 			{
 				Connect = new SqlConnection();
-				Connect.ConnectionString = @"server=SONTHANH; database = snake; user id = sa; password = 123";
+				Connect.ConnectionString = @"server= " + ClsParameter.databaseServerName + "; database = " + ClsParameter.databaseName + "; user id = " + ClsParameter.databaseUserName + "; password = " + ClsParameter.databasePassword;
 				Connect.Open();	
 			}
 			catch
@@ -35,7 +35,7 @@ namespace ProjectSnake
 		{
 			Connect.Close();
 		}
-		public  void loadDataTopCore(DataGridView Name)
+		public void loadDataTopCore(DataGridView Name)
 		{
 			connetDataBase();
 			try
@@ -166,8 +166,7 @@ namespace ProjectSnake
 			closeDataBase();
 			return (DataName == null) ? false : true;		
 		}
-
-		public void insertDataUser(string Name)
+		private void insertDataUser(string Name)
 		{
 			bool Exist = isExist(Name);
 			if (!Exist)
@@ -191,13 +190,13 @@ namespace ProjectSnake
 				return;
 			}
 		}
-		public void insertDataCore(string Name , int Core , int Type  )
+		private void insertDataScore(string Name, int Score, int Type)
 		{
 			connetDataBase();
 			try
 			{
 				
-				string Query = @"insert into Score(Score,ID_Type,ID_User) VALUES("+Core+","+Type+",(select ID_User from [User]  Where Username = N'"+Name+"'))" ;
+				string Query = @"insert into Score(Score,ID_Type,ID_User) VALUES(" + Score + "," + Type + ",(select ID_User from [User]  Where Username = N'" + Name + "'))" ;
 				Cmd = new SqlCommand(Query,Connect);
 				Cmd.ExecuteNonQuery();
 			
@@ -207,6 +206,18 @@ namespace ProjectSnake
 				MessageBox.Show("Something is wrong", "Warning");
 			}
 			closeDataBase();
+		}
+		public void saveScore(string Name, int Score, int Type)
+		{
+			this.insertDataUser(Name);
+			this.insertDataScore(Name, Score, Type);
+		}
+		public void saveScore(string Name1, string Name2, int Score1, int Score2, int Type)
+		{
+			this.insertDataUser(Name1);
+			this.insertDataScore(Name1, Score1, Type);
+			this.insertDataUser(Name2);
+			this.insertDataScore(Name2, Score2, Type);
 		}
 	}
 }
